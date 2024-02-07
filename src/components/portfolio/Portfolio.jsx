@@ -8,87 +8,84 @@ import IMG5 from '../../assets/JensenAuction.png'
 import IMG6 from '../../assets/Addressbook.jpg'
 
 const Portfolio = () => {
+  const data =[
+  {
+    id:1,
+    image:IMG1,
+    title:'Recipe Genius',
+    github:'https://github.com/AAB-TB',
+    demo:'https://github.com/AAB-TB',
+    type:'.NET c# Project'
+  },
+  {
+    id:2,
+    image:IMG2,
+    title:'Recipe Genius Web API',
+    github:'https://github.com/AAB-TB',
+    demo:'https://github.com/AAB-TB',
+    type:'ASP.NET Web API Project'
+  },
+  {
+    id:3,
+    image:IMG3,
+    title:'ShotGun Game',
+    github:'https://github.com/AAB-TB',
+    demo:'https://github.com/AAB-TB',
+    type:'.NET c# Project'
+  },
+  {
+    id:4,
+    image:IMG4,
+    title:'Bank System managment Web API',
+    github:'https://github.com/AAB-TB',
+    demo:'https://github.com/AAB-TB',
+    type:'ASP.NET Web API Project'
+  },
+  {
+    id:5,
+    image:IMG5,
+    title:'Jensen Auction Solution Web API',
+    github:'https://github.com/AAB-TB',
+    demo:'https://github.com/AAB-TB',
+    type:'ASP.NET Web API Project'
+  },
+  {
+    id:6,
+    image:IMG6,
+    title:'AddressBook',
+    github:'https://github.com/AAB-TB',
+    demo:'https://github.com/AAB-TB',
+    type:'.NET c# Project'
+  }
+
+]
   return (
     <section id='portfolio'>
       <h5>My Recent Work</h5>
       <h1>Portfolio</h1>
 
       <div className="container portfolio_container">
-        <article className="portfolio_item">
-          <div className="portfolio_item_image">
-            <img src={IMG1} alt="" />
-            
-          </div>
-          <h3>Recipe Genius</h3>
-            <div className="portfolio_item_cta">
-            <a href="https://github.com/AAB-TB" className="btn" target='_blank'>Github</a>
-            <a href="https://github.com/AAB-TB" className="btn btn-primary" target='_blank'>Window Form c# Project</a>
+       {
+        data.map(({id,image,title,github,demo,type}) => {
+          return(
+            <article key={id} className="portfolio_item">
+            <div className="portfolio_item_image">
+              <img src={image} alt={title} />
+              
             </div>
-        </article>
+            <h3>{title}</h3>
+            <div className="portfolio_item_cta">
+            <a href={github} className="btn" target='_blank'>Github</a>
+              <a href={demo} className="btn btn-primary" target='_blank'>{type}</a>
+            </div>
+              
+          </article>
+          )
+        })
 
-        <article className="portfolio_item">
-          <div className="portfolio_item_image">
-            <img src={IMG2} alt="" />
-            
-          </div>
-          <h3>Recipe Genius Web API</h3>
-           <div className="portfolio_item_cta">
-           <a href="https://github.com/AAB-TB" className="btn" target='_blank'>Github</a>
-            <a href="https://github.com/AAB-TB" className="btn btn-primary" target='_blank'>ASP.NET web API Project</a>
-           </div>
-        </article>
+       }
 
-        <article className="portfolio_item">
-          <div className="portfolio_item_image">
-            <img src={IMG3} alt="" />
-            
-          </div>
-          <h3>ShotGun Game</h3>
-          <div className="portfolio_item_cta">
-          <a href="https://github.com/AAB-TB" className="btn" target='_blank'>Github</a>
-          <a href="https://github.com/AAB-TB" className="btn btn-primary" target='_blank'>Window Form c# Project</a>
-          </div>
-            
-        </article>
-
-        <article className="portfolio_item">
-          <div className="portfolio_item_image">
-            <img src={IMG4} alt="" />
-            
-          </div>
-          <h3>Bank System managment Web API</h3>
-          <div className="portfolio_item_cta">
-          <a href="https://github.com/AAB-TB" className="btn" target='_blank'>Github</a>
-            <a href="https://github.com/AAB-TB" className="btn btn-primary" target='_blank'>ASP.NET web API Project</a>
-          </div>
-            
-        </article>
-
-        <article className="portfolio_item">
-          <div className="portfolio_item_image">
-            <img src={IMG5} alt="" />
-            
-          </div>
-          <h3>Jensen Auction Solution Web API</h3>
-          <div className="portfolio_item_cta">
-          <a href="https://github.com/AAB-TB" className="btn" target='_blank'>Github</a>
-            <a href="https://github.com/AAB-TB" className="btn btn-primary" target='_blank'>ASP.NET web API Project</a>
-          </div>
-            
-        </article>
-
-        <article className="portfolio_item">
-          <div className="portfolio_item_image">
-            <img src={IMG6} alt="" />
-            
-          </div>
-          <h3>AddressBook</h3>
-          <div className="portfolio_item_cta">
-          <a href="https://github.com/AAB-TB" className="btn" target='_blank'>Github</a>
-            <a href="https://github.com/AAB-TB" className="btn btn-primary" target='_blank'>Window Form c# Project</a>
-          </div>
-            
-        </article>
+      
       </div>
     </section>
   )
