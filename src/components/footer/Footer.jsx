@@ -3,7 +3,8 @@ import './Footer.css'
 import { FaFacebookSquare } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
-import Icon from '../../assets/aabtb.ico'
+/*import Icon from '../../assets/aabtb.ico'*/
+import Icon from '../../assets/AAB-TB.png'
 
 const Footer = () => {
   return (
